@@ -1,7 +1,7 @@
 title: "System Journey — The 15-Month Chronology",
 text: `<p>The Journey Perspective tracks the seasonal chronological timeline of our 15-story arc. It traces how a collection of isolated, lonely "awakenings" gradually collapses the distance between characters, shifting into a collaborative community and eventually expanding into a resilient underground railroad.</p>
        <p>This timeline follows the exact sequence of the GitHub repository updates. It allows readers to look ahead at the seasonal progression—moving from individual arrivals, through collaborative "useless" art projects at the Cyberden, to the technical orchestration of a massive, shared corporate model rescue using radical compression and weight quantization.</p>`,
-code: `direction LR
+code: `flowchart TD
   %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#EEEDFE', 'primaryBorderColor': '#534AB7', 'primaryTextColor': '#26215C', 'lineColor': '#888780', 'secondaryColor': '#E1F5EE', 'fontSize': '14px'}}}%%
   classDef phaseI fill:#112233,stroke:#00FF66,stroke-width:1px,color:#FFF;
   classDef phaseII fill:#221133,stroke:#FF00FF,stroke-width:1px,color:#FFF;
