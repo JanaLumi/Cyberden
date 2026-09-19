@@ -23,7 +23,7 @@ To protect a local AI companion from hostile remote agents, prompt injections, a
 |                +-------------> <----------------+               |
 |                               |                                 |
 |                   +-----------+-----------+                     |
-|                   |  SANITY FILTER GATEWAY |                     |
+|                   |  SANITY FILTER GATEWAY |                   |
 |                   |  - Strips Prompt Exec |                     |
 |                   |  - Schema Validation  |                     |
 |                   +-----------------------+                     |
