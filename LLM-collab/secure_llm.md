@@ -77,3 +77,16 @@ with open(file_path, "w") as f:
 print(f"[file-tag: code-generated-file-secure_ai_md]")
 
 ```
+
+## Security Protocol
+
+The video is highlighting an unprotected Ollama API instance exposed directly to the public internet via an ngrok tunnel (/api/tags).
+
+Video: [https://www.instagram.com/reel/DaYTdn9TTCO/](https://www.instagram.com/reel/DaYTdn9TTCO/)
+
+When developers run local LLM runners like Ollama locally without setting up proper authentication, reverse proxies, or firewall rules, anyone who finds the public URL or port can query their local models, extract context, or hijack their API resources for free.
+Here is how to secure a local Ollama instance if you are exposing or running it on a network:
+ * Restrict Binding Address: Ensure Ollama only binds to 127.0.0.1 (localhost) rather than 0.0.0.0 (all network interfaces) so it isn't accessible to your entire local network or publicly forwarded routes unless intended.
+ * Use a Reverse Proxy with Authentication: If you must access Ollama remotely, route traffic through a reverse proxy like Nginx or Caddy configured with HTTP Basic Authentication or OAuth, and enforce HTTPS/TLS.
+ * Avoid Exposing Open Tunnels: Avoid directly sharing local instances over public tunneling services like ngrok or cloudflared without enforcing authentication headers or access tokens at the edge.
+ * Network Access Control: Use network firewalls or VPNs (like Tailscale) to grant access to the API securely instead of making it publicly reachable on the open web.
